@@ -7,6 +7,4 @@ redirect_from:
   - /resume
 ---
 
-You can download my CV [here](./files/Can_Bodrumlu_Resume.pdf). 
-
-<a href="./files/Can_Bodrumlu_Resume.pdf" target="_blank">Download my CV</a>
+You can download my CV [here](./files/Can_Bodrumlu_Resume.pdf).
