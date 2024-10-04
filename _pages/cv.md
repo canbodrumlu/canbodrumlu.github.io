@@ -7,4 +7,4 @@ redirect_from:
   - /resume
 ---
 
-You can download my CV [here](./files/MahmutcanBodrumlu_CV.pdf).
+You can download my CV [here](./files/Can_Bodrumlu_Resume.pdf). 
