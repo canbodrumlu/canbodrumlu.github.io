@@ -11,7 +11,7 @@ Hi! My name is Can, <a href="https://en.wikipedia.org/wiki/Help:IPA/English" tar
 
 I am primarily interested in comparative politics, with a specific focus on political economy and quantitative methods. My research focuses on understanding bureaucracy and its role in state capacity. I wrote my master’s thesis on the impact of bureaucratic purges on public service provision, and I really enjoy playing with administrative data.
 
-You can check out my <a href="/academic/" target="_blank">research projects</a> or <a href="/files/Can_Bodrumlu_CV.pdf" target="_blank">download my CV</a>.
+You can check out my <a href="/academic/" target="_blank">research projects</a> or <a href="/files/CanBodrumlu_CV.pdf" target="_blank">download my CV</a>.
 
 <figure style="text-align: center; margin-top: 40px;">
   <img src="images/youden.gif" alt="the normal law of error" style="max-width: 80%; margin-bottom: 10px;">
