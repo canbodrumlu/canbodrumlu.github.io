@@ -14,5 +14,7 @@ I am primarily interested in comparative politics, with a specific focus on poli
 
 <div style="text-align: center; margin-top: 40px;">
   <img src="images/youden.gif" alt="the normal law of error" style="max-width: 80%; margin-bottom: 10px;">
-  <p style="font-size: 0.9em; font-style: italic;">William J. Youden</p>
+  <p style="font-size: 0.9em; font-style: italic; color: #888;">
+    William J. Youden (1962)
+  </p>
 </div>
