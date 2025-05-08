@@ -350,8 +350,3 @@ compress_html:
   ignore:
     envs: development
 
-# Enable dark mode toggle
-dark_mode:
-  enabled: true
-  default: "light"
-
