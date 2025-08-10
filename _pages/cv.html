@@ -24,20 +24,24 @@ redirect_from:
   }
 
   /* Styling for the download button */
-  .download-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #4B2E83;
-    text-decoration: none !important;  /* ← this forces removal */
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-
-  .download-button:hover {
-    background-color: #361F5E; /* Slightly darker shade on hover */
-  }
+.download-link {
+  display: inline-block;
+  font-size: 15px;
+  color: #4B2E83;
+  background: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 6px 14px;
+  text-decoration: none !important; /* <-- Add !important */
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+  
+.download-link:hover {
+  background: #f5f5fa;
+  color: #361F5E;
+  border-color: #4B2E83;
+}
+  
 </style>
 
 <!-- Embed the CV -->
@@ -51,7 +55,7 @@ redirect_from:
 
 <!-- Download button -->
 <p style="text-align: center;">
-  <a href="/files/Can_Bodrumlu_Resume.pdf" target="_blank" class="download-button">
+  <a href="/files/Can_Bodrumlu_Resume.pdf" target="_blank" class="download-link">
     Download CV
   </a>
 </p>
