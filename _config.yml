@@ -23,7 +23,7 @@ skin                     : dark # alternative options like dark, contrast, etc.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.heic"
   name             : "Can Bodrumlu"
   pronouns         : # example: "she/her"  
   bio              : "Ph.D Student, Political Science"
