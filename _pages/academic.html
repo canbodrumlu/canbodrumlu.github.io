@@ -80,56 +80,48 @@ author_profile: true
     <h2>Teaching</h2>
 
     <p class="inst-label">University of Washington</p>
-    <table class="teach-table">
-      <thead>
-        <tr>
-          <th>Term</th>
-          <th>Course</th>
-          <th>Role</th>
-          <th>Instructor</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="term">Spring 2026</td>
-          <td><strong>POLS 204:</strong> Introduction to Comparative Politics</td>
-          <td>Teaching Assistant</td>
-          <td>Prof. Long</td>
-        </tr>
-        <tr>
-          <td class="term">Winter 2026</td>
-          <td><strong>POLS 331:</strong> Government and Politics in the Middle East and North Africa</td>
-          <td>Teaching Assistant</td>
-          <td>Prof. Asli Cansunar</td>
-        </tr>
-        <tr>
-          <td class="term">Autumn 2025</td>
-          <td><strong>POLS 204:</strong> Introduction to Comparative Politics</td>
-          <td>Teaching Assistant</td>
-          <td>Prof. Asli Cansunar</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="teach-grid">
+      <div class="teach-header">
+        <span class="tc-term">Term</span>
+        <span class="tc-course">Course</span>
+        <span class="tc-role">Role</span>
+        <span class="tc-inst">Instructor</span>
+      </div>
+      <div class="teach-row">
+        <span class="tc-term">Spring 2026</span>
+        <span class="tc-course"><strong>POLS 204:</strong> Introduction to Comparative Politics</span>
+        <span class="tc-role">Teaching Assistant</span>
+        <span class="tc-inst">Prof. Long</span>
+      </div>
+      <div class="teach-row">
+        <span class="tc-term">Winter 2026</span>
+        <span class="tc-course"><strong>POLS 331:</strong> Government and Politics in the Middle East and North Africa</span>
+        <span class="tc-role">Teaching Assistant</span>
+        <span class="tc-inst">Prof. Asli Cansunar</span>
+      </div>
+      <div class="teach-row">
+        <span class="tc-term">Autumn 2025</span>
+        <span class="tc-course"><strong>POLS 204:</strong> Introduction to Comparative Politics</span>
+        <span class="tc-role">Teaching Assistant</span>
+        <span class="tc-inst">Prof. Asli Cansunar</span>
+      </div>
+    </div>
 
-    <p class="inst-label">Sabanci University</p>
-    <table class="teach-table">
-      <thead>
-        <tr>
-          <th>Term</th>
-          <th>Course</th>
-          <th>Role</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="term">2022–2024</td>
-          <td><strong>SPS 102:</strong> Humanity and Society</td>
-          <td>Teaching Assistant</td>
-          <td>Core freshman course</td>
-        </tr>
-      </tbody>
-    </table>
+    <p class="inst-label" style="margin-top: 1.5rem;">Sabanci University</p>
+    <div class="teach-grid">
+      <div class="teach-header">
+        <span class="tc-term">Term</span>
+        <span class="tc-course">Course</span>
+        <span class="tc-role">Role</span>
+        <span class="tc-inst"></span>
+      </div>
+      <div class="teach-row">
+        <span class="tc-term">2022–2024</span>
+        <span class="tc-course"><strong>SPS 102:</strong> Humanity and Society</span>
+        <span class="tc-role">Teaching Assistant</span>
+        <span class="tc-inst">Core freshman course</span>
+      </div>
+    </div>
   </section>
 
   <section id="awards">
@@ -318,36 +310,48 @@ author_profile: true
     color: #4B2E83;
     margin: 0 0 10px;
   }
-  .teach-table {
+  .teach-grid {
     width: 100%;
-    border-collapse: collapse;
     font-size: 0.9em;
     margin-bottom: 1.8rem;
   }
-  .teach-table thead th {
-    text-align: left;
-    padding: 0 12px 6px 0;
+  .teach-header, .teach-row {
+    display: grid;
+    grid-template-columns: 110px 1fr 140px 150px;
+    gap: 0 12px;
+    padding: 8px 0;
+    align-items: baseline;
+  }
+  .teach-header {
     border-bottom: 1px solid #e0e0e0;
-    color: #aaa;
+    padding-bottom: 6px;
+    margin-bottom: 2px;
+  }
+  .teach-header span {
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.04em;
+    color: #aaa;
     font-weight: 400;
-    background: none;
   }
-  .teach-table tbody td {
-    padding: 10px 12px 10px 0;
+  .teach-row {
     border-bottom: 1px solid #f2f2f2;
-    vertical-align: top;
-    color: #333;
   }
-  .teach-table tbody tr:last-child td {
+  .teach-row:last-child {
     border-bottom: none;
   }
-  .teach-table .term {
+  .tc-term {
     color: #999;
     white-space: nowrap;
-    width: 110px;
+  }
+  .tc-course {
+    color: #333;
+  }
+  .tc-role {
+    color: #666;
+  }
+  .tc-inst {
+    color: #666;
   }
 
   /* ── Awards & fellowships ── */
