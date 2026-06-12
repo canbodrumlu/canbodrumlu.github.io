@@ -1,0 +1,61 @@
+---
+layout: archive
+title: "Places I Have Been"
+permalink: /blog/places-i-have-been/
+author_profile: true
+---
+
+<style>
+  .blog-post-meta {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-post-meta a {
+    color: #888;
+    text-decoration: none;
+  }
+
+  .blog-post-meta a:hover {
+    text-decoration: underline;
+  }
+
+  .blog-post-body {
+    font-size: 0.95rem;
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .map-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+</style>
+
+<div class="blog-post-meta">
+  <a href="/blog/">← Blog</a> &nbsp;·&nbsp; June 2026
+</div>
+
+<div class="blog-post-body">
+  <p>Here are all the places I have had the chance to visit so far. Each pin is somewhere I have actually been — curious to see how the map fills up over time.</p>
+</div>
+
+<div class="map-container">
+  <iframe
+    src="https://umap.openstreetmap.fr/en/map/places-i-have-been_1411718?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=null&onLoadPanel=none&captionBar=false#6/50.999929/2.065430"
+    allowfullscreen
+    loading="lazy"
+    title="Places I have been"
+  ></iframe>
+</div>
