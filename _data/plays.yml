@@ -19,7 +19,7 @@
 - title: "Primary Trust"
   date: 2024-10-02
   theatre: "Seattle Repertory Theatre"
-  poster: /assets/images/plays/primary-trust.PNG
+  poster: /assets/images/plays/primary-trust.JPEG
   comment: 
 
 - title: "Blithe Spirit"
@@ -84,6 +84,43 @@
   
 - title: "The Park"
   date: 2024-10-18
+  poster: /assets/images/plays/park.jpeg
   theatre: "Seattle Public Theatre"
   comment: 
+
+- title: "Where Is Here?"
+  date: 2025-01-19
+  theatre: "Seattle Public Theatre"
+  poster: /assets/images/plays/where-is-here.jpg
+  comment:
+
+- title: "Letters From Max"
+  date: 2025-03-20
+  theatre: "Seattle Public Theatre"
+  poster: /assets/images/plays/letters-max.jpeg
+  comment:
+
+- title: "Squeeze"
+  date: 2025-04-13
+  theatre: "Seattle Public Theatre"
+  poster: /assets/images/plays/images.jpg
+  comment:
+
+- title: "House of Joy"
+  date: 2025-05-16
+  theatre: "Seattle Public Theatre"
+  poster: /assets/images/plays/house-joy.jpeg
+  comment:
+
+- title: "Li"
+  date: 2026-01-31
+  theatre: "Seattle Public Theatre"
+  poster: /assets/images/plays/li.png
+  comment:
+
+- title: "The World Looks Different Sitting Down"
+  date: 2026-03-01
+  theatre: "Seattle Public Theatre"
+  poster: /assets/images/plays/twldsd.webp
+  comment:
 
