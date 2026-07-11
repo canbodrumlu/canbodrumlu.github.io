@@ -46,12 +46,11 @@
   theatre: "Seattle Repertory Theatre"
   poster: /assets/images/plays/laughs-in-spanish.PNG
   comment: 
-
-
+  
   - title: "The Outsiders"
   date: 2025-10-16
   theatre: "Seattle Repertory Theatre"
-    poster: /assets/images/plays/outsiders.png
+  poster: /assets/images/plays/outsiders.png
   comment: 
 
 - title: "Come From Away"
@@ -63,7 +62,7 @@
 - title: "The Heart Sellers"
   date: 2026-01-18
   theatre: "Seattle Repertory Theatre"
-    poster: /assets/images/plays/heart-sellers.JPEG
+  poster: /assets/images/plays/heart-sellers.JPEG
   comment: 
   
 - title: "Here There Are Blueberries"
@@ -83,9 +82,7 @@
   theatre: "Seattle Repertory Theatre"
   poster: /assets/images/plays/appropriate.PNG
   comment: 
-
-
-
+  
 - title: "The Park"
   date: 2024-10-18
   theatre: "Seattle Public Theatre"
