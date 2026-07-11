@@ -20,25 +20,25 @@
 - title: "Primary Trust"
   date: 2024-10-02
   theatre: "Seattle Repertory Theatre"
-  poster: /assets/images/plays/primary-trust.png
+  poster: /assets/images/plays/primary-trust.PNG
   comment: 
 
 - title: "Blithe Spirit"
   date: 2024-12-04
   theatre: "Seattle Repertory Theatre"
-  poster: /assets/images/plays/blithe-spirit.png
+  poster: /assets/images/plays/blithe-spirit.PNG
   comment: 
 
 - title: "Blues for an Alabama Sky"
   date: 2025-02-09
   theatre: "Seattle Repertory Theatre"
-  poster: /assets/images/plays/blues-from-alabama-sky.png
+  poster: /assets/images/plays/blues-from-alabama-sky.PNG
   comment: 
 
 - title: "Mother Russia"
   date: 2025-03-06
   theatre: "Seattle Repertory Theatre"
-  poster: /assets/images/plays/mother-russia.png
+  poster: /assets/images/plays/mother-russia.PNG
   comment: 
 
 - title: "Laughs in Spanish"
@@ -46,4 +46,43 @@
   theatre: "Seattle Repertory Theatre"
   poster: /assets/images/plays/laughs-in-spanish.PNG
   comment: 
+
+
+  - title: "The Outsiders"
+  date: 2025-10-16
+  theatre: "Seattle Repertory Theatre"
+    poster: /assets/images/plays/outsiders.png
+  comment: 
+
+- title: "Come From Away"
+  date: 2026-01-03
+  theatre: "Seattle Repertory Theatre"
+  poster: /assets/images/plays/come-from-away.PNG
+  comment: 
+
+- title: "The Heart Sellers"
+  date: 2026-01-18
+  theatre: "Seattle Repertory Theatre"
+    poster: /assets/images/plays/heart-sellers.JPEG
+  comment: 
+  
+- title: "Here There Are Blueberries"
+  date: 2026-02-11
+  theatre: "Seattle Repertory Theatre"
+  poster: /assets/images/plays/here-are-the-blueberries.JPEG
+  comment: 
+
+- title: "Mary Jane"
+  date: 2026-04-12
+  theatre: "Seattle Repertory Theatre"
+   poster: /assets/images/plays/mary-jane.jpg
+  comment: 
+
+- title: "Appropriate"
+  date: 2026-04-26
+  theatre: "Seattle Repertory Theatre"
+  poster: /assets/images/plays/appropriate.PNG
+  comment: 
+
+
 
