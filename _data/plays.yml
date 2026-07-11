@@ -12,33 +12,38 @@
 
 
 - title: "The Skin of Our Teeth"
-  date: 2024-09-26
+  date: 2024-10-12
   theatre: "Seattle Repertory Theatre"
-  poster: /assets/images/plays//skin-of-our-teeth.png
+  poster: /assets/images/plays/skin-of-our-teeth.png
   comment: 
 
 - title: "Primary Trust"
-  date: 2024-10-24
+  date: 2024-10-02
   theatre: "Seattle Repertory Theatre"
+  poster: /assets/images/plays/primary-trust.png
   comment: 
 
 - title: "Blithe Spirit"
-  date: 2024-11-29
+  date: 2024-12-04
   theatre: "Seattle Repertory Theatre"
+  poster: /assets/images/plays/blithe-spirit.png
   comment: 
 
 - title: "Blues for an Alabama Sky"
-  date: 2025-01-30
+  date: 2025-02-09
   theatre: "Seattle Repertory Theatre"
+  poster: /assets/images/plays/blues-from-alabama-sky.png
   comment: 
 
 - title: "Mother Russia"
   date: 2025-03-06
   theatre: "Seattle Repertory Theatre"
+  poster: /assets/images/plays/mother-russia.png
   comment: 
 
 - title: "Laughs in Spanish"
-  date: 2025-04-17
+  date: 2025-04-27
   theatre: "Seattle Repertory Theatre"
+  poster: /assets/images/plays/laughs-in-spanish.PNG
   comment: 
 
