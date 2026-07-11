@@ -1,0 +1,104 @@
+---
+layout: archive
+title: "Plays I Have Seen"
+permalink: /blog/plays-i-have-seen/
+author_profile: true
+---
+
+<style>
+  .blog-post-meta {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-post-meta a {
+    color: #888;
+    text-decoration: none;
+  }
+
+  .blog-post-meta a:hover {
+    text-decoration: underline;
+  }
+
+  .blog-post-body {
+    font-size: 0.95rem;
+    color: #888;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .play-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .play-entry {
+    display: flex;
+    gap: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1.25rem 0;
+  }
+
+  .play-entry:last-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .play-poster {
+    width: 80px;
+    height: 115px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  .play-info {
+    flex: 1;
+  }
+
+  .play-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0 0 0.2rem;
+  }
+
+  .play-meta {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 0.4rem;
+  }
+
+  .play-comment {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin: 0;
+  }
+</style>
+
+<div class="blog-post-meta">
+  <a href="/blog/">← Blog</a> &nbsp;·&nbsp; July 2026
+</div>
+
+<div class="blog-post-body">
+  <p>A running log of the plays I've gone to see, where I saw them, and a quick note on what I thought.</p>
+</div>
+
+{% assign plays = site.data.plays | sort: 'date' | reverse %}
+
+<ul class="play-list">
+  {% for play in plays %}
+  <li class="play-entry">
+    {% if play.poster %}
+    <img src="{{ play.poster }}" alt="{{ play.title }} poster" class="play-poster">
+    {% endif %}
+    <div class="play-info">
+      <p class="play-title">{{ play.title }}</p>
+      <p class="play-meta">{{ play.date | date: "%B %-d, %Y" }} &middot; {{ play.theatre }}</p>
+      {% if play.comment %}
+      <p class="play-comment">{{ play.comment }}</p>
+      {% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ul>
