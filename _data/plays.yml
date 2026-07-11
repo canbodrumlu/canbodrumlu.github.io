@@ -1,0 +1,57 @@
+# Log of plays you've seen. Add a new entry each time you see one -
+# order doesn't matter, the page sorts them by date automatically (newest first).
+#
+# poster is optional - drop the poster image in assets/images/plays/ and
+# point to it below. comment is optional too.
+#
+# - title: "Play Name"
+#   date: 2026-07-05
+#   theatre: "Venue Name"
+#   poster: /assets/images/plays/play-name.jpg
+#   comment: "A short note about it."
+
+
+- title: "The Skin of Our Teeth"
+  date: 2024-09-26
+  theatre: "Seattle Repertory Theatre"
+  comment: "TODO: confirm the date you saw this and add a note."
+
+- title: "Primary Trust"
+  date: 2024-10-24
+  theatre: "Seattle Repertory Theatre"
+  comment: "TODO: confirm the date you saw this and add a note."
+
+- title: "Blithe Spirit"
+  date: 2024-11-29
+  theatre: "Seattle Repertory Theatre"
+  comment: "TODO: confirm the date you saw this and add a note."
+
+- title: "Blues for an Alabama Sky"
+  date: 2025-01-30
+  theatre: "Seattle Repertory Theatre"
+  comment: "TODO: confirm the date you saw this and add a note."
+
+- title: "Mother Russia"
+  date: 2025-03-06
+  theatre: "Seattle Repertory Theatre"
+  comment: "TODO: confirm the date you saw this and add a note."
+
+- title: "Laughs in Spanish"
+  date: 2025-04-17
+  theatre: "Seattle Repertory Theatre"
+  comment: "TODO: confirm the date you saw this and add a note."
+
+- title: "Eddie Izzard Hamlet"
+  date: 2025-04-30
+  theatre: "Seattle Repertory Theatre"
+  comment: "TODO: confirm the date you saw this and add a note."
+
+- title: "The Unfair Advantage"
+  date: 2025-05-15
+  theatre: "Seattle Repertory Theatre"
+  comment: "TODO: confirm the date you saw this and add a note."
+
+- title: "Duel Reality"
+  date: 2025-05-29
+  theatre: "Seattle Repertory Theatre"
+  comment: "TODO: confirm the date you saw this and add a note."
