@@ -73,7 +73,7 @@
 - title: "Mary Jane"
   date: 2026-04-12
   theatre: "Seattle Repertory Theatre"
-   poster: /assets/images/plays/mary-jane.jpg
+  poster: /assets/images/plays/mary-jane.jpg
   comment: 
 
 - title: "Appropriate"
