@@ -14,7 +14,7 @@
   date: 2024-10-12
   theatre: "Seattle Repertory Theatre"
   poster: /assets/images/plays/skin-of-our-teeth.png
-  comment: This was the first play I have seen in Seattle and also the first after a long, unnecessary break from theatre in general. It reminded me why I love theatre, and the execution at the Rep was absolutely brilliant. The Rep also became one of my favorite places in the city, especially during the big dark.
+  comment: This was the first play I have seen in Seattle and also the first after a long, unnecessary break from theatre in general. It reminded me why I love theatre, and the execution at the Rep wa[...]
 
 - title: "Primary Trust"
   date: 2024-11-02
@@ -45,8 +45,8 @@
   theatre: "Seattle Repertory Theatre"
   poster: /assets/images/plays/laughs-in-spanish.PNG
   comment: 
-  
-  - title: "The Outsiders"
+
+- title: "The Outsiders"
   date: 2025-10-16
   theatre: "Seattle Repertory Theatre"
   poster: /assets/images/plays/outsiders.png
@@ -63,7 +63,7 @@
   theatre: "Seattle Repertory Theatre"
   poster: /assets/images/plays/heart-sellers.JPEG
   comment: 
-  
+
 - title: "Here There Are Blueberries"
   date: 2026-02-11
   theatre: "Seattle Repertory Theatre"
@@ -81,7 +81,7 @@
   theatre: "Seattle Repertory Theatre"
   poster: /assets/images/plays/appropriate.PNG
   comment: 
-  
+
 - title: "The Park"
   date: 2024-10-18
   poster: /assets/images/plays/park.jpeg
