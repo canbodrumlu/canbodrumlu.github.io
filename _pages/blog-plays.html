@@ -74,6 +74,47 @@ author_profile: true
     color: #aaa;
     margin: 0;
   }
+
+  .plays-chart-wrap {
+    margin-bottom: 2rem;
+  }
+
+  .plays-chart-title {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 0 0 0.5rem;
+  }
+
+  #plays-chart svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: visible;
+  }
+
+  #plays-chart .chart-grid {
+    stroke: rgba(0, 0, 0, 0.08);
+    stroke-width: 1;
+  }
+
+  #plays-chart .chart-axis-text {
+    font-size: 9px;
+    fill: #888;
+  }
+
+  #plays-chart .chart-line {
+    fill: none;
+    stroke: #4B2E83;
+    stroke-width: 2;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+
+  #plays-chart .chart-point {
+    fill: #4B2E83;
+    stroke: #fff;
+    stroke-width: 1.5;
+  }
 </style>
 
 <div class="blog-post-meta">
@@ -81,8 +122,119 @@ author_profile: true
 </div>
 
 <div class="blog-post-body">
-  <p>I was a theatre kid (to be honest, I had more experience in puppeteering). Nowadays, theatre is my way out of all the chaos of academia. I realized I have no record of the plays I have been seeing since I moved to Seattle except the playbills collecting dust in my apartment. That's why I started keeping a running log of the plays I've gone to see, where I saw them, and maybe a quick note on what I thought of it.</p>
+  <p>I was a theatre kid (to be honest, I had more experience in puppeteering). Nowadays, theatre is my way out of all the chaos of academia. I realized I have no record of the plays I have been seeing since I moved to Seattle, except the playbills collecting dust in my apartment. That's why I started keeping a running log of the plays I've gone to see, where I saw them, and maybe a quick note on what I thought of it.</p>
 </div>
+
+<div class="plays-chart-wrap">
+  <p class="plays-chart-title">Plays watched per month</p>
+  <div id="plays-chart"></div>
+</div>
+
+<script>
+  var playDates = [
+    {% for play in site.data.plays %}"{{ play.date | date: '%Y-%m-%d' }}"{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
+  (function () {
+    var dates = playDates.map(function (d) { return new Date(d + 'T00:00:00'); });
+    if (!dates.length) return;
+
+    dates.sort(function (a, b) { return a - b; });
+
+    var start = new Date(dates[0].getFullYear(), dates[0].getMonth(), 1);
+    var end = new Date(dates[dates.length - 1].getFullYear(), dates[dates.length - 1].getMonth(), 1);
+
+    var months = [];
+    var cursor = new Date(start);
+    while (cursor <= end) {
+      months.push({ year: cursor.getFullYear(), month: cursor.getMonth(), count: 0 });
+      cursor.setMonth(cursor.getMonth() + 1);
+    }
+
+    dates.forEach(function (d) {
+      var m = months.filter(function (m) {
+        return m.year === d.getFullYear() && m.month === d.getMonth();
+      })[0];
+      if (m) m.count += 1;
+    });
+
+    var monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+    var w = 640, h = 200;
+    var marginLeft = 26, marginRight = 10, marginTop = 10, marginBottom = 22;
+    var plotW = w - marginLeft - marginRight;
+    var plotH = h - marginTop - marginBottom;
+
+    var maxCount = Math.max.apply(null, months.map(function (m) { return m.count; }));
+    maxCount = Math.max(maxCount, 1);
+
+    function x(i) {
+      return months.length > 1 ? marginLeft + (i * plotW) / (months.length - 1) : marginLeft + plotW / 2;
+    }
+    function y(v) {
+      return marginTop + plotH - (v / maxCount) * plotH;
+    }
+
+    var svgNS = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(svgNS, 'svg');
+    svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+    svg.setAttribute('role', 'img');
+    svg.setAttribute('aria-label', 'Line chart of plays watched per month');
+
+    for (var v = 0; v <= maxCount; v++) {
+      var gy = y(v);
+
+      var line = document.createElementNS(svgNS, 'line');
+      line.setAttribute('x1', marginLeft);
+      line.setAttribute('x2', w - marginRight);
+      line.setAttribute('y1', gy);
+      line.setAttribute('y2', gy);
+      line.setAttribute('class', 'chart-grid');
+      svg.appendChild(line);
+
+      var gridLabel = document.createElementNS(svgNS, 'text');
+      gridLabel.setAttribute('x', marginLeft - 6);
+      gridLabel.setAttribute('y', gy + 3);
+      gridLabel.setAttribute('text-anchor', 'end');
+      gridLabel.setAttribute('class', 'chart-axis-text');
+      gridLabel.textContent = v;
+      svg.appendChild(gridLabel);
+    }
+
+    months.forEach(function (m, i) {
+      var showLabel = i % 2 === 0 || i === months.length - 1;
+      if (!showLabel) return;
+      var label = document.createElementNS(svgNS, 'text');
+      label.setAttribute('x', x(i));
+      label.setAttribute('y', h - marginBottom + 14);
+      label.setAttribute('text-anchor', 'middle');
+      label.setAttribute('class', 'chart-axis-text');
+      label.textContent = monthNames[m.month] + " '" + String(m.year).slice(2);
+      svg.appendChild(label);
+    });
+
+    var points = months.map(function (m, i) { return x(i) + ',' + y(m.count); }).join(' ');
+    var polyline = document.createElementNS(svgNS, 'polyline');
+    polyline.setAttribute('points', points);
+    polyline.setAttribute('class', 'chart-line');
+    svg.appendChild(polyline);
+
+    months.forEach(function (m, i) {
+      var circle = document.createElementNS(svgNS, 'circle');
+      circle.setAttribute('cx', x(i));
+      circle.setAttribute('cy', y(m.count));
+      circle.setAttribute('r', 4);
+      circle.setAttribute('class', 'chart-point');
+      var title = document.createElementNS(svgNS, 'title');
+      title.textContent = monthNames[m.month] + ' ' + m.year + ': ' + m.count + (m.count === 1 ? ' play' : ' plays');
+      circle.appendChild(title);
+      svg.appendChild(circle);
+    });
+
+    document.getElementById('plays-chart').appendChild(svg);
+  })();
+</script>
 
 {% assign plays = site.data.plays | sort: 'date' | reverse %}
 
