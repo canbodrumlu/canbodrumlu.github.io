@@ -86,7 +86,7 @@ author_profile: true
   }
 
   #plays-chart {
-    max-width: 480px;
+    max-width: 600px;
   }
 
   #plays-chart svg {
@@ -170,7 +170,7 @@ author_profile: true
 
     var monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-    var w = 480, h = 150;
+    var w = 600, h = 190;
     var marginLeft = 36, marginRight = 8, marginTop = 8, marginBottom = 20;
     var plotW = w - marginLeft - marginRight;
     var plotH = h - marginTop - marginBottom;
@@ -222,11 +222,8 @@ author_profile: true
     axisTitle.textContent = 'Plays';
     svg.appendChild(axisTitle);
 
-    var desiredTicks = 6;
-    var labelStep = Math.max(1, Math.round((months.length - 1) / (desiredTicks - 1)) || 1);
-
     months.forEach(function (m, i) {
-      var showLabel = i % labelStep === 0;
+      var showLabel = i % 2 === 0;
       if (!showLabel) return;
       var label = document.createElementNS(svgNS, 'text');
       label.setAttribute('x', x(i));
