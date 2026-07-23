@@ -85,6 +85,10 @@ author_profile: true
     margin: 0 0 0.5rem;
   }
 
+  #plays-chart {
+    max-width: 480px;
+  }
+
   #plays-chart svg {
     width: 100%;
     height: auto;
@@ -126,7 +130,7 @@ author_profile: true
 </div>
 
 <div class="plays-chart-wrap">
-  <p class="plays-chart-title">Plays watched per month</p>
+  <p class="plays-chart-title">Plays seen</p>
   <div id="plays-chart"></div>
 </div>
 
@@ -161,8 +165,8 @@ author_profile: true
 
     var monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-    var w = 640, h = 200;
-    var marginLeft = 26, marginRight = 10, marginTop = 10, marginBottom = 22;
+    var w = 480, h = 150;
+    var marginLeft = 24, marginRight = 8, marginTop = 8, marginBottom = 20;
     var plotW = w - marginLeft - marginRight;
     var plotH = h - marginTop - marginBottom;
 
@@ -202,8 +206,11 @@ author_profile: true
       svg.appendChild(gridLabel);
     }
 
+    var desiredTicks = 6;
+    var labelStep = Math.max(1, Math.round((months.length - 1) / (desiredTicks - 1)) || 1);
+
     months.forEach(function (m, i) {
-      var showLabel = i % 2 === 0 || i === months.length - 1;
+      var showLabel = i % labelStep === 0;
       if (!showLabel) return;
       var label = document.createElementNS(svgNS, 'text');
       label.setAttribute('x', x(i));
