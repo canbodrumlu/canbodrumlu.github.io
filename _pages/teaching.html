@@ -111,4 +111,32 @@ author_profile: true
   .tc-inst {
     color: #666;
   }
+
+  /* ── Mobile: stack rows instead of a fixed-width grid ── */
+  @media (max-width: 600px) {
+    .teach-header {
+      display: none;
+    }
+    .teach-row {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      padding: 12px 0;
+    }
+    .tc-term {
+      font-size: 0.78em;
+      font-weight: 600;
+      color: #6b5690;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      white-space: normal;
+    }
+    .tc-course {
+      font-size: 1em;
+    }
+    .tc-role,
+    .tc-inst {
+      font-size: 0.85em;
+    }
+  }
 </style>
