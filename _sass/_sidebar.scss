@@ -76,10 +76,23 @@
    Author profile and links
    ========================================================================== */
 
+.author__profile {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "avatar content"
+    "avatar urls";
+  column-gap: 15px;
+  align-items: start;
+
+  @include breakpoint($large) {
+    display: block;
+  }
+}
+
 .author__avatar {
-  display: table-cell;
-  vertical-align: top;
-  width: 80px;
+  grid-area: avatar;
+  width: 110px;
   // set width only, for non-square avatars
   // height: 36px;
 
@@ -101,17 +114,12 @@
 }
 
 .author__content {
-  display: table-cell;
-  vertical-align: top;
-  padding-left: 15px;
-  padding-right: 25px;
+  grid-area: content;
   line-height: 1;
 
   @include breakpoint($large) {
     display: block;
     width: 100%;
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 
@@ -154,12 +162,11 @@
 }
 
 .author__urls-wrapper {
+  grid-area: urls;
   position: relative;
-  display: table-cell;
-  vertical-align: top;
+  margin-top: 8px;
   font-family: $sans-serif;
   z-index: 10;
-  position: relative;
   cursor: pointer;
 
   li:last-child {
