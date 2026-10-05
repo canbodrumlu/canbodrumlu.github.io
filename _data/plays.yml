@@ -153,3 +153,9 @@
   theatre: "Union Arts Center"
   poster: /assets/images/plays/midsummer.jpeg
   comment:
+  
+- title: "Eureka Day"
+  date: 2026-10-04
+  theatre: "Seattle Repertory Theatre"
+  poster: /assets/images/plays/eureka.png
+  comment: 
